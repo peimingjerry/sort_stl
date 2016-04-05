@@ -1,0 +1,18 @@
+
+EXE 	:= test
+OBJ_DIR := ./obj
+RM 	:= rm -rf
+LD 	:= g++
+CC 	:= g++
+CCFLAG	:= -g -Wall
+CCFLAG	+= -D_DEBUG
+#CCFLAG	+= -DUSE_STL_PRIORITY_QUEUE
+
+$(EXE): $(OBJ_DIR)/priority_queue.o
+	$(LD) -o $@ $^
+
+$(OBJ_DIR)/%.o : %.cpp *.h
+	$(CC) $(CCFLAG) -o $@ -c $<
+
+clean:
+	$(RM) $(EXE) $(OBJ_DIR)/*.o
