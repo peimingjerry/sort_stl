@@ -1,0 +1,139 @@
+*****************************************************
+Fast methods:
+
+#define COUNT       16777216 2^24
+#define KEY_RANGE   5000000
+
+----------------------------
+Using STL sort():
+Time Use: 9710.73 ms
+----------------------------
+Using STL stable_sort():
+Time Use: 12581.4 ms
+----------------------------
+Using quick sort:
+    Partition:
+Time Use: 11389.1 ms
+----------------------------
+Using quick sort:
+    Partition:
+    Final insertion sort:
+Time Use: 10030.2 ms
+----------------------------
+Using merge sort:
+Time Use: 19922.7 ms
+----------------------------
+With insertion if step<=16
+Using merge sort:
+Time Use: 17506.9 ms
+----------------------------
+Using merge sort:
+    None-recursive merge:
+Time Use: 14121.5 ms
+----------------------------
+Using merge sort:
+    Insert_sort if the scale is smaller than 16:
+    None-recursive merge:
+Time Use: 13480.8 ms
+----------------------------
+Using heap sort:
+    heap_sort:
+Time Use: 41917.7 ms
+----------------------------
+improvement of heap sort:
+Using heap sort:
+    heap_sort:
+Time Use: 32142.7 ms
+----------------------------
+
+*****************************************************
+All methods:
+
+#define COUNT       65536 2^16
+#define KEY_RANGE   30000
+----------------------------
+Using STL sort():
+Time Use: 24.353 ms
+----------------------------
+Using STL stable_sort():
+Time Use: 33.641 ms
+----------------------------
+Using quick sort:
+    Partition:
+Time Use: 31.069 ms
+----------------------------
+Using quick sort:
+    Partition:
+    Final insertion sort:
+Time Use: 27.174 ms
+----------------------------
+Using basic insertion sort:
+Time Use: 23576 ms
+----------------------------
+Using basic selection sort:
+Time Use: 30568.5 ms
+----------------------------
+Using shell sort:
+Time Use: 17561 ms
+----------------------------
+Using merge sort:
+Time Use: 54.549 ms
+----------------------------
+With insertion if step<=16
+Using merge sort:
+Time Use: 44.934 ms
+----------------------------
+Using merge sort:
+    None-recursive merge:
+Time Use: 37.263 ms
+----------------------------
+Using merge sort:
+    Insert_sort if the scale is smaller than 16:
+    None-recursive merge:
+Time Use: 35.512 ms
+----------------------------
+Using heap sort:
+    heap_sort:
+Time Use: 89.84 ms
+----------------------------
+improvement of heap sort:
+Using heap sort:
+    heap_sort:
+Time Use: 67.334 ms
+----------------------------
+*****************************************************
+nth_element:
+----------------------------
+sing STL nth_element:
+Time Use: 5377.87 ms
+Selected the 10th element:
+(2, 0)
+
+Using STL nth_element:
+Time Use: 5381.21 ms
+Selected the 1000th element:
+(302, 0)
+----------------------------
+with heap_select:
+Using self nth_element:
+Time Use: 5316.82 ms
+Selected the 10th element:
+(2, 0)
+
+Using self nth_element:
+Time Use: 5332.12 ms
+Selected the 1000th element:
+(302, 0)
+----------------------------
+without heap_select:
+Using self nth_element:
+Time Use: 5553.48 ms
+Selected the 10th element:
+(2, 0)
+
+Using self nth_element:
+Time Use: 5539.39 ms
+Selected the 1000th element:
+(302, 0)
+----------------------------
+*****************************************************
